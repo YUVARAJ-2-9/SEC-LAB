@@ -17,10 +17,11 @@ class Bank{
         this._balance=initialamout;
 
     }
+    // getter methos is uses for geeting the value which we update the sette metho
     get balance(){
         return this._balance;
     }
-    set _balance(amount){
+     set _balance(amount){      // setter method is called update the value
         if(amount>0){
             this._balance += amount;
             console.log(amount);
