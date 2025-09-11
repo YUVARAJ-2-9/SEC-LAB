@@ -1,4 +1,4 @@
-let current =new Date("2024-09-29");
+let current =new Date("2025-01-01");
 let day =current.getDay();
 console.log(current)
 console.log(current.toString());
