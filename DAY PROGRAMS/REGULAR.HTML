@@ -1,0 +1,66 @@
+ <!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // *->0 or more
+        // +->1 or more
+        // ?->0 or 1
+        let text ="aaaba";
+        let pattern= /\a*/g;
+        let result=text.match(pattern)
+        console.log(result);
+
+        // modifiers
+
+        let sentences= "javascript programming language.\n java programming language"
+        let pattern2=/\programming+/igm;
+        let result2 =sentences.match(pattern2);
+        console.log(result2);
+        
+        // Metachar
+
+        let digitchar="001js";
+        let pattern3=/\d/g;
+        let result3=digitchar.match(pattern3);
+        console.log(result3);
+
+        let wordchar="001js";
+        let pattern4=/(\w+)/g;
+        let result4=wordchar.match(pattern4)
+        console.log(result4);
+        
+
+        let texts="hi yuvaraj";
+        let pattern5=/(\w+)\s+(\w+)/;
+        let result5=texts.match(pattern5);
+        console.log(result5);
+        console.log(result5[0]);
+        console.log(result5[1]);
+        console.log(result5[2]);
+        
+
+        let text1="apple banana apple grape";
+        let pattern6=/(apple)/g;
+        let result6=pattern6.exec(text1);
+        console.log(result6[0]);
+        console.log(result6[1]);
+        // replace
+        let pattern7=/apple/g;
+        let result7=text1.replace(pattern7,"orange");
+        console.log(result7);
+        // split
+
+        let pattern8=/\s+/;
+        let result8=text1.split(pattern8);
+        console.log(result8);
+
+
+
+    </script>
+</body>
+</html> 
