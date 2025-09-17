@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // set is collection uninion values .it automatically remove duplicate
+        // let mySet=new Set([iterable])
+
+        let email=new Set([]);
+        email.add("js2gmail.com");
+        email.add("java@gamil.com");
+        email.add("py@gmail.com");
+        email.add("py@gmail.com");
+        // console.log(email);
+        // email.delete("py@gmail.com")
+        // console.log(email)
+        // email.clear()
+        // console.log(email)
+
+        for(let mailId of email){
+            console.log(mailId)
+        }
+
+        email.forEach(x=>{
+            console.log(x)
+        })
+
+        let admin=new Set(["write","read","delete"]);
+        let user=new Set(["read"]);
+
+        function haspermission(role,granted){
+            return role.has(granted);
+
+        }
+        console.log(haspermission(admin,"delete"));
+        console.log(haspermission (user,"read"));
+
+
+        let setA=new Set([1,2,3,4,5,1]);
+        let setB=new Set([6,7,8,9,10,1]);
+        let union=new Set([...setA,...setB]);
+        console.log(union);
+
+        let intersection=new Set([...setA].filter(x=>setB.has(x)));
+        console.log(intersection);
+
+        let diff =new Set([...setA].filter(x=>!setB.has(x)));
+        console.log(diff)
+
+        // Return a new iterator value object with [value,value]pairs
+
+        let furits=new Set(["Apple","Banana"]);
+
+        let entries=furits.entries();
+        for(let entry of entries){
+            console.log(entry)
+        }
+
+        // weak
+        // ?javascript weakmap is collection of key/value pair
+        // where the key must be objects!
+
+        let user1={
+            name:"yuvaraj"};
+        let user2={
+            name:"gokul"};
+            let mymap=new Map();
+            mymap.set(user1,"welcome yuvaraj");
+            mymap.set(user2,"welcome gokul");
+            console.log(mymap)
+
+            for(let map of mymap){
+                console.log(map)
+            }
+
+            
+
+            
+     
+
+
+    </script>
+</body>
+</html>
